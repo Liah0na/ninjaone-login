@@ -1,4 +1,4 @@
-# Testign Automation Project [NEURON]
+# Testign Automation Project
 Automation Testing for Login page
 
 
