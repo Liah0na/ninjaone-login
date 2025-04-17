@@ -1,13 +1,9 @@
 import { test, expect } from '@playwright/test';
-import { LOGIN_URL } from '../utils/env';
-
-if (!LOGIN_URL) {
-  throw new Error('LOGIN_URL is not defined. Please set it in your environment variables.');
-}
+import { env } from '../utils/env';
 
 test.describe('Login UI tests', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto(LOGIN_URL);
+    await page.goto(env.LOGIN_URL);
   });
 
   test('No allowed empty fields.', async ({ page }) => {
@@ -26,4 +22,3 @@ test.describe('Login UI tests', () => {
     await expect(errorToast).toBeVisible({ timeout: 5000 });
   });
 });
-  
