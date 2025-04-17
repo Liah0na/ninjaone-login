@@ -22,3 +22,4 @@ test.describe('Login UI tests', () => {
     await expect(errorToast).toBeVisible({ timeout: 5000 });
   });
 });
+  
