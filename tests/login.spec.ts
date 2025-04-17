@@ -25,8 +25,8 @@ test.describe('Login UI tests', () => {
     await page.fill('input[type="password"]', env.VALID_PASSWORD);
     await page.waitForTimeout(500);
     await page.click('button:has-text("Sign in")');
-    await expect(page.locator('div.alert.alert-danger:has-text("Human verification failed")')).toBeVisible({timeout: 10000});
-    // await page.waitForLoadState('networkidle');
-    // await expect(page.locator('h2:has-text("MFA Setup")')).toBeVisible({ timeout: 10000 });
+    // await expect(page.locator('div.alert.alert-danger:has-text("Human verification failed")')).toBeVisible({timeout: 10000});
+    await page.waitForLoadState('networkidle');
+    await expect(page.locator('h2:has-text("MFA Setup")')).toBeVisible({ timeout: 10000 });
   });
 });
