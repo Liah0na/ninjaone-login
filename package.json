@@ -2,15 +2,30 @@
   "name": "login-page-automation",
   "version": "1.0.0",
   "description": "Automatización de tests de login usando Playwright y TypeScript",
+  "main": "index.js",
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
     "report": "playwright show-report"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liah0na/ninjaone-login.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Liah0na/ninjaone-login/issues"
+  },
+  "homepage": "https://github.com/Liah0na/ninjaone-login#readme",
   "devDependencies": {
-    "@playwright/test": "^1.43.1",
-    "typescript": "^5.4.2",
-    "dotenv": "^16.4.1"
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.14.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
   }
 }
