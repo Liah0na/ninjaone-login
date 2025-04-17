@@ -42,7 +42,13 @@ jobs:
           publish_dir: playwright-report
           publish_branch: gh-pages
 
-      - name: Upload Playwright Test Results
+      - name: Upload Playwright HTML report
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-html-report
+          path: playwright-report/
+            
+      - name: Upload Playwright test results (screenshots, traces, videos)
         uses: actions/upload-artifact@v4
         with:
           name: playwright-test-results
