@@ -34,6 +34,8 @@ jobs:
         run: npx playwright test --reporter=html
         env:
           LOGIN_URL: ${{ secrets.LOGIN_URL }}
+          VALID_EMAIL: ${{ secrets.VALID_EMAIL }}
+          VALID_PASSWORD: ${{ secrets.VALID_PASSWORD }}
 
       - name: Deploy Playwright report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
